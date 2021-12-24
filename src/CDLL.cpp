@@ -4,6 +4,7 @@
 
 CDLL::CDLL()
 {
+    head = tail = nullptr; // link list is empty
 }
 
 void CDLL::insert(int d)
