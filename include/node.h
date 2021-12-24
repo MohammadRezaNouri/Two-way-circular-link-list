@@ -3,6 +3,8 @@
 
 class node
 {
+    friend class CDLL;
+
 private:
     int data;
     node *next, *prev;
