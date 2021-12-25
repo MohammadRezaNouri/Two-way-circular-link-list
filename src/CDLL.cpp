@@ -31,6 +31,19 @@ void CDLL::insert(int d)
 
 void CDLL::print()
 {
+    if (head == nullptr && head == tail && tail == nullptr)
+    {
+        std::cout << "[ ]" << endl;
+        return;
+    }
+    node *curr = head;
+    std::cout << "[ ";
+    while (curr->text != head)
+    {
+        std::cout << curr->data << ' ';
+        curr = curr->next;
+    }
+    std::cout << curr->data << " ]" << endl;
 }
 
 void CDLL::deleteByKey(int d)
