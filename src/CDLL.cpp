@@ -19,7 +19,7 @@ void CDLL::insert(int d)
     else
     {
         node *curr = head;
-        while (curr->text != head) // find end element in link list
+        while (curr->next != head) // find end element in link list
             curr = curr->next;
         curr->next = temp;
         temp->prev = curr;
@@ -38,7 +38,7 @@ void CDLL::print()
     }
     node *curr = head;
     std::cout << "[ ";
-    while (curr->text != head)
+    while (curr->next != head)
     {
         std::cout << curr->data << ' ';
         curr = curr->next;
@@ -55,7 +55,7 @@ void CDLL::deleteByKey(int d)
     }
     node *curr = head;
     int i = 0;
-    while (curr->text != head)
+    while (curr->next != head)
     {
         i++;
         if (curr->data == d)
@@ -100,7 +100,7 @@ void CDLL::deleteAtPosition(int d)
     }
     node *curr = head;
     int i = 0;
-    while (curr->text != head)
+    while (curr->next != head)
     {
         if (i == d)
         {
