@@ -23,7 +23,7 @@ void CDLL::insert(int d)
             curr = curr->next;
         curr->next = temp;
         temp->prev = curr;
-        temp.next = head;
+        temp->next = head;
         head->prev = temp;
         tail = temp;
     }
