@@ -14,6 +14,7 @@ git clone https://github.com/MohammadRezaNouri/Two-way-circular-link-list --recu
 ## Installation
 ### Windows
 Put all .h and .cpp files in one folder.
+
 open the cmd or PowerShell and go to files directory with cd command and execute the following commands :
 ```bash
 g++ *.cpp -o app -O2
@@ -21,6 +22,7 @@ g++ *.cpp -o app -O2
 ```
 ### Linux
 open the terminal and go to file directory with cd command and execute the following commands :
+
 With [CMake](https://cmake.org/)
 ```bash
 cd build
@@ -29,6 +31,7 @@ make
 ./app
 ```
 Without [CMake](https://cmake.org/)
+
 Put all .h and .cpp files in one folder.
 ```bash
 g++ *.cpp -o app -O2
@@ -44,3 +47,6 @@ Complete main.cpp
 ## Thanks to
 #### [Dr Muharram Mansoorizadeh](https://github.com/mansoorm1)
 #### [Mr AmirHosseinBabaeayan](https://github.com/AmirHosseinBabaeayan)
+
+## License
+Licensed under GPLv3. See [LICENSE.md](https://github.com/MohammadRezaNouri/Two-way-circular-link-list/blob/main/LICENSE.md).
