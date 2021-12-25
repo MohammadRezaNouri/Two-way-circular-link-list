@@ -58,7 +58,7 @@ void CDLL::deleteByKey(int d)
     while (curr->text != head)
     {
         i++;
-        if (curr->data = d)
+        if (curr->data == d)
         {
             curr->prev->next = curr->next;
             curr->next->prev = curr->prev;
@@ -81,7 +81,7 @@ void CDLL::deleteByKey(int d)
             return;
         }
     }
-    else if (curr->data = d)
+    else if (curr->data == d)
     {
         curr->prev->next = curr->next;
         curr->next->prev = curr->prev;
