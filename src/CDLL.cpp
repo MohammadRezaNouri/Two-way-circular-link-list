@@ -33,7 +33,7 @@ void CDLL::print()
 {
     if (head == nullptr && head == tail && tail == nullptr)
     {
-        std::cout << "[ ]" << endl;
+        std::cout << "[ ]" << std::endl;
         return;
     }
     node *curr = head;
@@ -43,14 +43,14 @@ void CDLL::print()
         std::cout << curr->data << ' ';
         curr = curr->next;
     }
-    std::cout << curr->data << " ]" << endl;
+    std::cout << curr->data << " ]" << std::endl;
 }
 
 void CDLL::deleteByKey(int d)
 {
     if (head == nullptr && head == tail && tail == nullptr) // link list is empty
     {
-        std::cout << "Not found!" << endl;
+        std::cout << "Not found!" << std::endl;
         return;
     }
     node *curr = head;
@@ -62,7 +62,7 @@ void CDLL::deleteByKey(int d)
         {
             curr->prev->next = curr->next;
             curr->next->prev = curr->prev;
-            std::cout << "Find and deleted" << endl;
+            std::cout << "Find and deleted" << std::endl;
             if (i == 1)
             {
                 head = curr->next;
@@ -77,7 +77,7 @@ void CDLL::deleteByKey(int d)
         if (head->data == d) // deleted head
         {
             head = tail = nullptr;
-            std::cout << "Find and deleted" << endl;
+            std::cout << "Find and deleted" << std::endl;
             return;
         }
     }
@@ -85,17 +85,17 @@ void CDLL::deleteByKey(int d)
     {
         curr->prev->next = curr->next;
         curr->next->prev = curr->prev;
-        std::cout << "Find and deleted" << endl;
+        std::cout << "Find and deleted" << std::endl;
         return;
     }
-    std::cout << d << "Not found!" << endl;
+    std::cout << d << "Not found!" << std::endl;
 }
 
 void CDLL::deleteAtPosition(int d)
 {
     if (head == nullptr && head == tail && tail == nullptr) // link list is empty
     {
-        std::cout << "Not found!" << endl;
+        std::cout << "Not found!" << std::endl;
         return;
     }
     node *curr = head;
@@ -106,7 +106,7 @@ void CDLL::deleteAtPosition(int d)
         {
             curr->prev->next = curr->next;
             curr->next->prev = curr->prev;
-            std::cout << "Position element deleted" << endl;
+            std::cout << "Position element deleted" << std::endl;
             if (i == 0)
             {
                 head = curr->next;
@@ -122,7 +122,7 @@ void CDLL::deleteAtPosition(int d)
         if (i == d) // deleted head
         {
             head = tail = nullptr;
-            std::cout << "Position element deleted" << endl;
+            std::cout << "Position element deleted" << std::endl;
             return;
         }
     }
@@ -130,8 +130,8 @@ void CDLL::deleteAtPosition(int d)
     {
         curr->prev->next = curr->next;
         curr->next->prev = curr->prev;
-        std::cout << "Position element deleted" << endl;
+        std::cout << "Position element deleted" << std::endl;
         return;
     }
-    std::cout << d << "Position element not found!" << endl;
+    std::cout << d << "Position element not found!" << std::endl;
 }
