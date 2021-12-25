@@ -48,6 +48,47 @@ void CDLL::print()
 
 void CDLL::deleteByKey(int d)
 {
+    if (head == nullptr && head == tail && tail == nullptr) // link list is empty
+    {
+        std::cout << "Not found!" << endl;
+        return;
+    }
+    node *curr = head;
+    int i = 0;
+    while (curr->text != head)
+    {
+        i++;
+        if (curr->data = d)
+        {
+            curr->prev->next = curr->next;
+            curr->next->prev = curr->prev;
+            std::cout << "Find and deleted" << endl;
+            if (i == 1)
+            {
+                head = curr->next;
+                tail = head->prev;
+            }
+            return;
+        }
+        curr = curr->next;
+    }
+    if (i == 0)
+    {
+        if (head->data == d) // deleted head
+        {
+            head = tail = nullptr;
+            std::cout << "Find and deleted" << endl;
+            return;
+        }
+    }
+    else if (curr->data = d)
+    {
+        curr->prev->next = curr->next;
+        curr->next->prev = curr->prev;
+        std::cout << "Find and deleted" << endl;
+        return;
+    }
+    std::cout << d << "Not found!" << endl;
 }
 
 void CDLL::deleteAtPosition(int d)
